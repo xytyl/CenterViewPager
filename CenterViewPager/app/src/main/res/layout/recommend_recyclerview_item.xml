@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="193.3dp"
+    android:layout_height="271dp"
+    android:clipChildren="false">
+
+    <View
+        android:id="@+id/iv_recommend_recyclerview_background"
+        android:layout_width="0dp"
+        android:layout_height="271dp"
+        android:background="@drawable/background_recommend_recycler_item"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_recommend_recyclerview_item"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10.5dp"
+        android:layout_marginLeft="9.1dp"
+        android:layout_marginRight="9.1dp"
+        android:layout_marginTop="10.5dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/iv_recommend_recyclerview_background"
+        app:layout_constraintLeft_toLeftOf="@id/iv_recommend_recyclerview_background"
+        app:layout_constraintRight_toRightOf="@id/iv_recommend_recyclerview_background"
+        app:layout_constraintTop_toTopOf="@id/iv_recommend_recyclerview_background"/>
+
+</android.support.constraint.ConstraintLayout>
