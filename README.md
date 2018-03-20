@@ -1,0 +1,2 @@
+# CenterViewPager
+一个可以居中显示的ViewPager，内部item为RecyclerView，上下滑动操作RecyclerView，左右滑动操作ViewPager
