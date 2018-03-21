@@ -2,6 +2,7 @@
 最近项目需求，做一个订制的ViewPager，要求在能够左右滑动的同时，ViewPager的item本身也是一个叠放的容器且可上下滑动实现业务要求，如上滑删除、下滑加入收藏等，于是写一篇博客记录一下控件的实现。
 
 首先看一下效果图：
+![](https://github.com/xytyl/CenterViewPager/blob/master/CenterPagerView.gif)
 
 
 # 基本思路
