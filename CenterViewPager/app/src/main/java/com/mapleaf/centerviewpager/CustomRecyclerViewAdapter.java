@@ -53,7 +53,7 @@ public class CustomRecyclerViewAdapter<T> extends RecyclerView.Adapter<CustomRec
 
     public void moveItemToBottom(int position) {
         T data = mDataList.remove(position);
-        mDataList.add(mDataList.size()-1, data);
+        mDataList.add(mDataList.size() > 1 ? mDataList.size() - 1 : 0, data);
         notifyDataSetChanged();
     }
 }

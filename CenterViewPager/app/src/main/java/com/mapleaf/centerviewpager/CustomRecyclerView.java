@@ -14,7 +14,6 @@ import java.util.List;
 
 public class CustomRecyclerView<T> extends RecyclerView {
     private List<T> mSimilarList;
-    private ItemSwipeCallBack mCallback;
 
     public CustomRecyclerView(Context context, ViewPager viewPager, T data) {
         super(context);
@@ -25,13 +24,12 @@ public class CustomRecyclerView<T> extends RecyclerView {
         mSimilarList = new ArrayList<>();
         mSimilarList.add(data);
         mSimilarList.add(data);
-        mSimilarList.add(data);
 
         mSimilarList.add(0, data);
         CustomRecyclerViewAdapter adapter = new CustomRecyclerViewAdapter(mSimilarList);
         setAdapter(adapter);
-        mCallback=new ItemSwipeCallBack(adapter,viewPager);
-        ItemTouchHelper helper=new ItemTouchHelper(mCallback);
+        ItemSwipeCallBack callback=new ItemSwipeCallBack(adapter,viewPager);
+        ItemTouchHelper helper=new ItemTouchHelper(callback);
         helper.attachToRecyclerView(this);
     }
 }

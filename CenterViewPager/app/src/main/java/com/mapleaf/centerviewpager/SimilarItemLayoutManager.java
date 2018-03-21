@@ -23,8 +23,8 @@ public class SimilarItemLayoutManager extends RecyclerView.LayoutManager {
             visibleCount = getItemCount();
         }
 
-        for(int i=visibleCount;i>=0;i--){
-            View view=recycler.getViewForPosition(i);
+        for(int i=visibleCount;i>=1;i--){
+            View view=recycler.getViewForPosition(i-1);
             addView(view);
             measureChildWithMargins(view, 0, 0);
             int widthSpace = getWidth() - getDecoratedMeasuredWidth(view);

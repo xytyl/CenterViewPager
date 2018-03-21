@@ -39,6 +39,7 @@ public class ItemSwipeCallBack extends ItemTouchHelper.SimpleCallback {
                         public void onAnimationEnd(Animator animation) {
                             super.onAnimationEnd(animation);
                             mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1, true);
+                            mAdapter.notifyDataSetChanged();
                         }
                     });
         }
@@ -51,5 +52,13 @@ public class ItemSwipeCallBack extends ItemTouchHelper.SimpleCallback {
         } else if (dY < viewHolder.itemView.getHeight()) {
             viewHolder.itemView.setTranslationY(dY);
         }
+    }
+
+    @Override
+    public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+        super.clearView(recyclerView, viewHolder);
+        viewHolder.itemView.setScaleX(1);
+        viewHolder.itemView.setScaleY(1);
+        viewHolder.itemView.setRotation(0);
     }
 }
