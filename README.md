@@ -1,7 +1,13 @@
+---
+title: 一个可以上下左右滑动且当前项居中的ViewPager
+grammar_cjkRuby: true
+---
+
 # 背景介绍
 最近项目需求，做一个订制的ViewPager，要求在能够左右滑动的同时，ViewPager的item本身也是一个叠放的容器且可上下滑动实现业务要求，如上滑删除、下滑加入收藏等，于是写一篇博客记录一下控件的实现。
 
-![enter description here][./images/CenterPagerView.gif "CenterPagerView"]
+首先看一下效果图：
+![enter description here][1]
 
 # 基本思路
 
@@ -164,3 +170,6 @@ public class ItemSwipeCallBack extends ItemTouchHelper.SimpleCallback {
 ```
 
 附上博客：http://blog.csdn.net/bjyanxin/article/details/79631945
+
+
+  [1]: ./images/CenterPagerView.gif "CenterPagerView"
