@@ -161,7 +161,7 @@ public class ItemSwipeCallBack extends ItemTouchHelper.SimpleCallback {
         SimilarItemLayoutManager layoutManager = new SimilarItemLayoutManager();
         setLayoutManager(layoutManager);
 		
-		        ItemSwipeCallBack callback=new ItemSwipeCallBack(adapter,viewPager);
+	ItemSwipeCallBack callback=new ItemSwipeCallBack(adapter,viewPager);
         ItemTouchHelper helper=new ItemTouchHelper(callback);
         helper.attachToRecyclerView(this);
 ```
