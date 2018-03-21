@@ -81,8 +81,8 @@ public class SimilarItemLayoutManager extends RecyclerView.LayoutManager {
             visibleCount = getItemCount();
         }
 
-        for(int i=visibleCount;i>=0;i--){
-            View view=recycler.getViewForPosition(i);
+        for(int i=visibleCount;i>=1;i--){
+            View view=recycler.getViewForPosition(i-1);
             addView(view);
             measureChildWithMargins(view, 0, 0);
             int widthSpace = getWidth() - getDecoratedMeasuredWidth(view);
@@ -97,7 +97,7 @@ public class SimilarItemLayoutManager extends RecyclerView.LayoutManager {
 }
 ```
 
-因为我们的RecyclerView是层叠摆放，因此只需要显示上面的三个view即可，最终将view摆放在RecyclerView的中间。
+因为我们的RecyclerView是层叠摆放，因此只需要显示上面的2个view即可，最终将view摆放在RecyclerView的中间。
 
 最后就是实现ItemTouchHelper.SimpleCallback
 
